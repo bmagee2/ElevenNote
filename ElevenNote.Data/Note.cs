@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ElevenNote.Data
 {
+    // MAKE PUBLIC
     public class Note
     {
         // PROPERTIES
@@ -14,7 +15,7 @@ namespace ElevenNote.Data
         public int NoteId { get; set; }
 
         [Required]
-        public Guid OwnerId { get; set; }
+        public Guid OwnerId { get; set; } // Guid -- Globally Unique IDentifier -- type that allows us to create unique, near impossible to replicate (like 1 in 1 trillion chance) IDs
 
         [Required]
         public string Title { get; set; }
