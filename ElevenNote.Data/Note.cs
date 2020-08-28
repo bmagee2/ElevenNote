@@ -10,7 +10,7 @@ namespace ElevenNote.Data
     public class Note
     {
         // PROPERTIES
-        [Key]
+        [Key]   // uniquely identifies an entity; primary key of the corresponding database; NoteId will always be a unique number
         public int NoteId { get; set; }
 
         [Required]
