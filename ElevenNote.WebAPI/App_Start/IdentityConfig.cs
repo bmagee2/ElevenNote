@@ -29,11 +29,12 @@ namespace ElevenNote.WebAPI
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
+                // MADE CHANGES FOR DEVELOPING
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequireNonLetterOrDigit = false, // changed to false so we can use simpler passwords while developing
+                RequireDigit = false, // changed to false so we can use simpler passwords while developing
+                RequireLowercase = false, // changed to false so we can use simpler passwords while developing
+                RequireUppercase = false, // changed to false so we can use simpler passwords while developing
             };
             var dataProtectionProvider = options.DataProtectionProvider;
             if (dataProtectionProvider != null)
